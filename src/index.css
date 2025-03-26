@@ -111,6 +111,7 @@ button:focus-visible {
   width: 100%;
 }
 
+
 .quote-text {
   font-size: 18px;
   font-style: italic;
@@ -122,4 +123,23 @@ button:focus-visible {
   font-weight: bold;
   color: #747bff;
   margin-top: 10px;
+}
+
+.book-card {
+  border: 2px solid transparent;
+  /* Start with a transparent border */
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  /* Smooth transition */
+  border-radius: 4px;
+  /* Rounded corners */
+
+}
+
+.book-card:hover {
+  border-color: #747bff;
+  /* Change border color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Shadow effect on hover */
+  transform: scale(1.1);
 }

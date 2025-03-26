@@ -17,14 +17,21 @@ export default function Books() {
   return (
     <div className="books">
       <h1>Seuss Treasury</h1>
-      <div className="book" style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {books.map((book) => (
-          <Link key={book.id} to={`/book/${book.id}`}>
-            <img
-              src={book.image}
-              alt={book.title}
-              style={{ width: "150px", margin: "10px", cursor: "pointer", borderRadius: "4px" }}
-            />
+          <Link key={book.id} to={`/book/${book.id}`} className="book">
+            <div className="book-card">  {/* Add this wrapper div with book-card class */}
+              <img
+                src={book.image}
+                alt={book.title}
+                style={{
+                  width: "150px",
+                  margin: "10px",
+                  cursor: "pointer",
+                  borderRadius: "4px",
+                }}
+              />
+            </div>
           </Link>
         ))}
       </div>
